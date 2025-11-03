@@ -1,10 +1,6 @@
 import React from 'react';
-import { Product } from '../types';
-<<<<<<< HEAD
+import { Product } from './types';
 import { HeartIcon, ShareIcon } from './Icons';
-=======
-import { HeartIcon } from './Icons';
->>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
 
 interface ProductDetailProps {
     product: Product;
@@ -12,17 +8,11 @@ interface ProductDetailProps {
     onAddToCart: (product: Product) => void;
     onToggleWishlist: (productId: number) => void;
     isWishlisted: boolean;
-<<<<<<< HEAD
     onShare: (product: Product) => void;
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBuyNow, onAddToCart, onToggleWishlist, isWishlisted, onShare }) => {
-=======
-}
-
-const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBuyNow, onAddToCart, onToggleWishlist, isWishlisted }) => {
->>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
-    return (
+        return (
         <div className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                  <img src={product.imageUrl} alt={product.name} className="w-full h-auto object-cover rounded-lg shadow-md" />
@@ -57,16 +47,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBuyNow, onAddT
                 >
                     {product.stock > 0 ? 'Buy Now' : 'Out of Stock'}
                 </button>
-<<<<<<< HEAD
                 <button
                     onClick={() => onShare(product)}
                     className="p-3 border border-gray-300 text-gray-600 rounded-lg hover:border-sky-500 hover:text-sky-500 transition-colors"
-                    aria-label="Share product link"
-                >
+                    aria-label="Share product link">
                     <ShareIcon className="w-6 h-6" />
                 </button>
-=======
->>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
+
+
                  <button
                     onClick={() => onToggleWishlist(product.id)}
                     className={`p-3 border rounded-lg transition-colors ${isWishlisted ? 'text-red-500 border-red-300' : 'text-gray-600 border-gray-300 hover:border-red-500 hover:text-red-500'}`}

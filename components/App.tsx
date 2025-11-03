@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Product, Order, OrderStatus, CartItem, ProductCategory } from './types';
 import { INITIAL_PRODUCTS } from './constants';
-import Header from './components/Header';
-import ProductList from './components/ProductList';
-import Modal from './components/Modal';
-import CheckoutForm from './components/CheckoutForm';
-import ProductDetail from './components/ProductDetail';
-import OwnerLogin from './components/OwnerLogin';
-import OwnerDashboard from './components/OwnerDashboard';
-import CustomerOrderHistory from './components/CustomerOrderHistory';
-import ShoppingCart from './components/ShoppingCart';
-import Wishlist from './components/Wishlist';
-import Sidebar from './components/Sidebar';
+import Header from './Header';
+import ProductList from './ProductList';
+import Modal from './Modal';
+import { CheckoutForm } from './CheckoutForm';
+import ProductDetail from './ProductDetail';
+import OwnerLogin from './OwnerLogin';
+import OwnerDashboard from './OwnerDashboard';
+import CustomerOrderHistory from './CustomerOrderHistory';
+import ShoppingCart from './ShoppingCart';
+import Wishlist from './Wishlist';
+import Sidebar from './Sidebar';
 
 function App() {
   const [products, setProducts] = useState<Product[]>(INITIAL_PRODUCTS);
