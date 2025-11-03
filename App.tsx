@@ -33,6 +33,7 @@ function App() {
   const [isOwnerLoggedIn, setIsOwnerLoggedIn] = useState(false);
   const [currentView, setCurrentView] = useState<'store' | 'ownerLogin' | 'ownerDashboard'>('store');
 
+<<<<<<< HEAD
   const [toastMessage, setToastMessage] = useState<string>('');
   const [showQrCode, setShowQrCode] = useState(false);
   const [pendingOrderData, setPendingOrderData] = useState<Omit<Order, 'id' | 'orderDate' | 'status'> | null>(null);
@@ -53,6 +54,8 @@ function App() {
       });
   };
 
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
   const handleBuyNow = (product: Product) => {
     setSelectedProductForDetail(null);
     setIsCartOpen(false);
@@ -170,8 +173,11 @@ function App() {
     setIsViewingMyOrders(false);
     setIsCartOpen(false);
     setIsWishlistOpen(false);
+<<<<<<< HEAD
     setShowQrCode(false);
     setPendingOrderData(null);
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
   };
 
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -228,6 +234,7 @@ function App() {
               onMenuClick={() => setIsSidebarOpen(true)}
             />
 
+<<<<<<< HEAD
             {/* QR Code Overlay - Appears above all cards */}
             {showQrCode && pendingOrderData && (
               <div 
@@ -289,6 +296,8 @@ function App() {
               </div>
             )}
 
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
              {/* Off-canvas Sidebar */}
             {isSidebarOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity" onClick={() => setIsSidebarOpen(false)}></div>
@@ -314,7 +323,10 @@ function App() {
                     onAddToCart={handleAddToCart}
                     wishlist={wishlist}
                     onToggleWishlist={handleToggleWishlist}
+<<<<<<< HEAD
                     onShare={handleShareProduct}
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
                   />
                   <div className="container mx-auto px-4 sm:px-6 lg:px-8 my-8">
                         <div className="bg-gradient-to-r from-sky-500 to-blue-600 rounded-xl shadow-lg p-8 text-center text-white">
@@ -334,7 +346,10 @@ function App() {
                     onAddToCart={handleAddToCart}
                     wishlist={wishlist}
                     onToggleWishlist={handleToggleWishlist}
+<<<<<<< HEAD
                     onShare={handleShareProduct}
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
                   />
                    <ProductList 
                     products={otherProducts.filter(p => 
@@ -347,7 +362,10 @@ function App() {
                     onAddToCart={handleAddToCart}
                     wishlist={wishlist}
                     onToggleWishlist={handleToggleWishlist}
+<<<<<<< HEAD
                     onShare={handleShareProduct}
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
                   />
               </>
             ) : (
@@ -368,7 +386,10 @@ function App() {
                       onAddToCart={handleAddToCart}
                       wishlist={wishlist}
                       onToggleWishlist={handleToggleWishlist}
+<<<<<<< HEAD
                       onShare={handleShareProduct}
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
                     />
                 </div>
             )}
@@ -389,12 +410,16 @@ function App() {
             onAddToCart={handleAddToCart}
             onToggleWishlist={handleToggleWishlist}
             isWishlisted={wishlist.includes(selectedProductForDetail.id)}
+<<<<<<< HEAD
             onShare={handleShareProduct}
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
         />}
       </Modal>
       
       {/* Checkout Modal */}
       <Modal isOpen={!!selectedProductForCheckout} onClose={closeModal} title={`Checkout: ${selectedProductForCheckout?.name || ''}`}>
+<<<<<<< HEAD
         {selectedProductForCheckout && (
           <CheckoutForm 
             product={selectedProductForCheckout} 
@@ -406,6 +431,9 @@ function App() {
             }}
           />
         )}
+=======
+        {selectedProductForCheckout && <CheckoutForm product={selectedProductForCheckout} onClose={closeModal} onPlaceOrder={handlePlaceOrder} />}
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
       </Modal>
 
       {/* My Orders Modal */}
@@ -439,6 +467,7 @@ function App() {
               }}
           />
       </Modal>
+<<<<<<< HEAD
 
       {toastMessage && (
         <div className="fixed bottom-5 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-6 py-2 rounded-full shadow-lg z-[100] animate-toast-in-up">
@@ -461,6 +490,8 @@ function App() {
             animation: toast-in-up 0.3s ease-out forwards;
         }
       `}</style>
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
     </div>
   );
 }

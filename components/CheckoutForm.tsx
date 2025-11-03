@@ -5,7 +5,10 @@ interface CheckoutFormProps {
     product: Product;
     onClose: () => void;
     onPlaceOrder: (order: Omit<Order, 'id' | 'orderDate' | 'status'>) => void;
+<<<<<<< HEAD
     onShowQrCode?: (orderData: Omit<Order, 'id' | 'orderDate' | 'status'>) => void;
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
 }
 
 // Define InputField as a standalone component outside of CheckoutForm
@@ -33,7 +36,11 @@ const InputField: React.FC<{
     </div>
 );
 
+<<<<<<< HEAD
 const CheckoutForm: React.FC<CheckoutFormProps> = ({ product, onClose, onPlaceOrder, onShowQrCode }) => {
+=======
+const CheckoutForm: React.FC<CheckoutFormProps> = ({ product, onClose, onPlaceOrder }) => {
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
     const [quantity, setQuantity] = useState(1);
     const [isShowingQrCode, setIsShowingQrCode] = useState(false);
     const [shippingAddress, setShippingAddress] = useState<ShippingAddress>({
@@ -76,6 +83,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ product, onClose, onPlaceOr
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (paymentMethod === PaymentMethod.UPI) {
+<<<<<<< HEAD
             // Prepare order data
             const itemToOrder: CartItem = { ...product, quantity };
             const orderData: Omit<Order, 'id' | 'orderDate' | 'status'> = {
@@ -92,13 +100,20 @@ const CheckoutForm: React.FC<CheckoutFormProps> = ({ product, onClose, onPlaceOr
                 // Fallback to showing QR code inside modal
                 setIsShowingQrCode(true);
             }
+=======
+            setIsShowingQrCode(true);
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
         } else {
             finalizeOrder();
         }
     };
     
+<<<<<<< HEAD
     // Show QR code inside modal only if onShowQrCode callback is not provided (fallback)
     if (isShowingQrCode && !onShowQrCode) {
+=======
+    if (isShowingQrCode) {
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
         const upiQrUrl = "https://ibb.co/wND1h7NM";
         
         return (

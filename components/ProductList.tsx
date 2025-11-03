@@ -9,12 +9,19 @@ interface ProductListProps {
     onAddToCart: (product: Product) => void;
     wishlist: number[];
     onToggleWishlist: (productId: number) => void;
+<<<<<<< HEAD
     onShare: (product: Product) => void;
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
     layout?: 'grid' | 'horizontal';
     title?: string;
 }
 
+<<<<<<< HEAD
 const ProductList: React.FC<ProductListProps> = ({ products, onBuyNow, onViewDetails, onAddToCart, wishlist, onToggleWishlist, onShare, layout = 'grid', title }) => {
+=======
+const ProductList: React.FC<ProductListProps> = ({ products, onBuyNow, onViewDetails, onAddToCart, wishlist, onToggleWishlist, layout = 'grid', title }) => {
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
     
     if (layout === 'horizontal') {
         return (
@@ -31,7 +38,10 @@ const ProductList: React.FC<ProductListProps> = ({ products, onBuyNow, onViewDet
                                     onAddToCart={onAddToCart} 
                                     onToggleWishlist={onToggleWishlist}
                                     isWishlisted={wishlist.includes(product.id)}
+<<<<<<< HEAD
                                     onShare={onShare}
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
                                 />
                             </div>
                         ))}
@@ -64,7 +74,10 @@ const ProductList: React.FC<ProductListProps> = ({ products, onBuyNow, onViewDet
                           onAddToCart={onAddToCart} 
                           onToggleWishlist={onToggleWishlist}
                           isWishlisted={wishlist.includes(product.id)}
+<<<<<<< HEAD
                           onShare={onShare}
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
                       />
                   ))}
               </div>

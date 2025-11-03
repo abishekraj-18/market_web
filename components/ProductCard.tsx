@@ -1,6 +1,10 @@
 import React from 'react';
 import { Product } from '../types';
+<<<<<<< HEAD
 import { HeartIcon, ShareIcon } from './Icons';
+=======
+import { HeartIcon } from './Icons';
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
 
 interface ProductCardProps {
     product: Product;
@@ -9,10 +13,16 @@ interface ProductCardProps {
     onAddToCart: (product: Product) => void;
     onToggleWishlist: (productId: number) => void;
     isWishlisted: boolean;
+<<<<<<< HEAD
     onShare: (product: Product) => void;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onBuyNow, onViewDetails, onAddToCart, onToggleWishlist, isWishlisted, onShare }) => {
+=======
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({ product, onBuyNow, onViewDetails, onAddToCart, onToggleWishlist, isWishlisted }) => {
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
     return (
         <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:-translate-y-1 group flex flex-col hover:shadow-xl hover:shadow-sky-100/80">
             <div className="relative">
@@ -53,6 +63,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onBuyNow, onViewDeta
                 <div className="flex justify-between items-center mt-4">
                     <p className="text-lg font-bold text-sky-600">₹{product.price.toFixed(2)}</p>
                     <div className="flex items-center space-x-2">
+<<<<<<< HEAD
                         <button
                             onClick={() => onShare(product)}
                             className="p-2 border border-gray-300 text-gray-500 rounded-full hover:bg-gray-100 transition-colors"
@@ -60,6 +71,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onBuyNow, onViewDeta
                          >
                             <ShareIcon className="w-4 h-4"/>
                          </button>
+=======
+>>>>>>> b9d51d535ef76337ffea00444bbb1df7f2bb3c40
                          <button
                             onClick={() => onAddToCart(product)}
                             disabled={product.stock === 0}
